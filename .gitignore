@@ -2,6 +2,9 @@
 # Node modules
 node_modules/
 
+#vs code settings.
+.vscode/
+
 # Env files
 .env
 
