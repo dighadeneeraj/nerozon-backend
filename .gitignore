@@ -1,0 +1,19 @@
+
+# Node modules
+node_modules/
+
+# Env files
+.env
+
+# Logs
+logs
+*.log
+
+# Coverage & build
+coverage/
+dist/
+build/
+
+# OS junk files
+.DS_Store
+Thumbs.db

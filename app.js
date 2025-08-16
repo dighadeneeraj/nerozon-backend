@@ -1,0 +1,26 @@
+//express app configuration....
+const express = require('express');
+const dotenv = require('dotenv');
+const corsMiddleware = require("./presentation/middlewares/corsMiddleware");
+const authRoutes   = require('./presentation/routes/authRoutes');
+const errorHandler = require("./presentation/middlewares/erroHandler");
+
+
+//env file configuration...
+dotenv.config();
+
+const app = express();
+
+//middlewares...
+app.use(corsMiddleware)
+app.use(express.json());
+app.use('/api/auth', authRoutes);
+//error handler..
+app.use(errorHandler)
+
+//express initiator...
+
+
+
+
+module.exports  = app;
