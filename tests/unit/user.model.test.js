@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const User = require('../../infrastructure/database/models/userModel');
 
+// TEST CASES FOR USER SCHEMA LEVEL VALIDATION....
 //TEST SUITES..
 describe('User Model (Unit)', () => {
 
