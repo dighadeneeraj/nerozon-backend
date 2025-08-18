@@ -18,3 +18,20 @@ async function connectToDB(){
 
 // ESTABLISH THE CONNECTION...
 connectToDB();
+
+// GREACEFULL SHUTDOWN.
+const shutdown = (signal) => {
+  console.log(`\nReceived ${signal}, shutting down...`);
+  server.close(async () => {
+    try {
+      await mongoose.connection.close(false);
+      console.log('DB connection closed');
+      process.exit(0);
+    } catch (e) {
+      console.error('Error during shutdown', e);
+      process.exit(1);
+    }
+  });
+};
+process.on('SIGINT', () => shutdown('SIGINT'));
+process.on('SIGTERM', () => shutdown('SIGTERM'));
