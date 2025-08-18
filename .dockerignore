@@ -1,0 +1,13 @@
+# Node modules
+node_modules
+#vs code settings.
+.vscode/
+.git
+.gitignore
+.env
+.env.*
+coverage
+logs
+npm-debug.log*
+yarn-debug.log*
+Dockerfile
