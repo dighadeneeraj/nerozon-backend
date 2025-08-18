@@ -2,8 +2,9 @@
   "name": "ecommerce-mvc",
   "version": "1.0.1",
   "description": "this is a eccomerce backent application. ",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "cross-env NODE_ENV=test jest --runInBand",
     "test:watch": "cross-env NODE_ENV=test jest --watch",
     "test:coverage": "cross-env NODE_ENV=test jest --coverage --runInBand"
